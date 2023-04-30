@@ -1,2 +1,3 @@
-# Scripts
-Scripts for MSF and other cool stuf
+shell
+
+port: 8899
